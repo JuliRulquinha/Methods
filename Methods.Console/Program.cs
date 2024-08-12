@@ -17,7 +17,7 @@ namespace Methods.Console
             
             double y = utilizing.ReturnYValue(1, -3, 1, 2);
 
-            System.Console.WriteLine(y);
+           // System.Console.WriteLine(y);
 
         }
     }
