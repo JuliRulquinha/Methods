@@ -273,7 +273,7 @@ namespace Methods.Library
         /// <param name="n1"></param>
         /// <param name="n2"></param>
         /// <param name="n3"></param>
-        public void IncresingOrder(double n1, double n2, double n3)
+        public void IncreasingOrder(double n1, double n2, double n3)
         {
 
 
@@ -334,9 +334,9 @@ namespace Methods.Library
         public void IncreasingOrder2(params double[] numbers)
         {
 
-            foreach (var item in numbers)
+            foreach (var x in numbers)
             {
-                Console.WriteLine(item);
+                Console.WriteLine(x);
             }
 
         }
