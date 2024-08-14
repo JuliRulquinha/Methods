@@ -20,8 +20,8 @@ namespace Methods.Library
         //Method 2 -
         public void PrintPS(int a)
         {
-            Console.WriteLine($"The predecessor is :{a-1}");
-            Console.WriteLine($"The sucessor is : {a+1}");
+            Console.WriteLine($"The predecessor is :{a - 1}");
+            Console.WriteLine($"The sucessor is : {a + 1}");
 
         }
 
@@ -30,7 +30,7 @@ namespace Methods.Library
         public double ServiceTax(double a)
         {
             double accountValue = a;
-            double tax = a*0.1;
+            double tax = a * 0.1;
             return accountValue + tax;
         }
 
@@ -39,14 +39,14 @@ namespace Methods.Library
         public int YearToDays(int year)
         {
             int daysOfYear = 365;
-            return year*daysOfYear;
+            return year * daysOfYear;
         }
 
         //Method - 5
 
         public double TriangleArea(double b, double h)
-        { 
-            return (b * h)/2;
+        {
+            return (b * h) / 2;
         }
 
         // Method - 6
@@ -73,7 +73,7 @@ namespace Methods.Library
         {
             //y=x2 –3x+1.
             double xElevated2 = Math.Pow(x, 2);
-            double y = xElevated2-(3 * x) + 1;
+            double y = xElevated2 - (3 * x) + 1;
             if (x == 2)
             {
                 y = -1;
@@ -87,8 +87,8 @@ namespace Methods.Library
         {
             //y = ax2 + bx + c.
             double xElevated2 = Math.Pow(x, 2);
-            double y = (a*xElevated2)+(b*x)+c;
-               
+            double y = (a * xElevated2) + (b * x) + c;
+
             return y;
 
         }
@@ -97,7 +97,7 @@ namespace Methods.Library
 
         public void Names(string firstName, string secondName)
         {
-            Console.WriteLine(secondName+","+ firstName);
+            Console.WriteLine(secondName + "," + firstName);
         }
 
         // Method - 10
@@ -135,7 +135,7 @@ namespace Methods.Library
                 }
             }
             Console.WriteLine($"You'll be paying: {payment}.");
-            return payment; 
+            return payment;
         }
         public int CountBeers(int amount)
         {
@@ -145,19 +145,19 @@ namespace Methods.Library
             Console.WriteLine($"{amount} beers = {beerBox} boxes and {remainder} bottles.");
 
             return beerBox;
-            
+
         }
         public double CalculateBeerProfit(double numberOfBeer)
         {
-            double cost = numberOfBeer*1.80;
+            double cost = numberOfBeer * 1.80;
             double beerPrice = 2.10;
             double totalPrice = numberOfBeer * beerPrice;
-            double profit = totalPrice - cost;   
-            double grossRevenue = numberOfBeer*beerPrice;
+            double profit = totalPrice - cost;
+            double grossRevenue = numberOfBeer * beerPrice;
 
             Console.WriteLine($"The cost is {cost}\n The gross revenue is {grossRevenue} \n The profit is {profit}");
             return cost;
-            
+
 
         }
 
@@ -171,7 +171,7 @@ namespace Methods.Library
                 biggerNumber = numb1;
                 smallerNumber = numb2;
             }
-            else if(numb1<numb2)
+            else if (numb1 < numb2)
             {
                 biggerNumber = numb2;
                 smallerNumber = numb1;
@@ -179,9 +179,15 @@ namespace Methods.Library
             Console.WriteLine($"The bigger number is {biggerNumber} and the smaller number is {smallerNumber}");
             return 0;
         }
-
+        /// <summary>
+        /// Calculates the average between two given elements.
+        /// </summary>
+        /// <param name="grade1"></param>
+        /// <param name="grade2"></param>
+        /// <returns></returns>
         public double CalculateAverage(double grade1, double grade2)
         {
+
             double average = (grade1 + grade2) / 2;
 
             if (average < 7)
@@ -196,10 +202,6 @@ namespace Methods.Library
         }
         public void CalculateAllowance(string name, char sex, char civilStatus, int age, double salary)
         {
-            //Use as seguintes regras para calcular a pensão:
-            //-Caso seja homem, tem direito a 15 % do salário do pai, se for solteiro e menor de 18 anos
-            //- Caso seja mulher, tem direito a 20 % do salário do pai, se for solteira e menor de 21 anos e 30 % do salário do marido, se for casada.
-            //- Nos demais casos a pensão é zero.
 
             double allowance = 0;
             double husbandSalary = 0;
@@ -246,63 +248,99 @@ namespace Methods.Library
         /// <param name="n1"></param>
         /// <param name="n2"></param>
         /// <param name="n3"></param>
-            public void SmallestNumber(double n1, double n2, double n3)
-            
-            {
-                if (n1 < n2 && n1 < n3)
-                {
-                    Console.WriteLine($"The smallest number between {n2} and {n3} is: {n1}");
-                }
-                
-                else if (n2 < n1 && n2 < n3)
-                {
-                    Console.WriteLine($"The smallest number between {n1} and {n3} is: {n2}");
-                }
-                
-                else if(n3 < n1 && n3 < n2) 
-                {
-                    Console.WriteLine($"The smallest number between {n1} and {n2} is: {n3}");
-                }
-               
-            }
-        public void IncresingOrder(double n1, double n2, double n3)
-        {
-            double biggestNumber = 0;
-            double middleNumber = 0;
-            double smallestNumber = 0;
+        public void SmallestNumber(double n1, double n2, double n3)
 
-            if (n1 > n2 && n1> n3)
+        {
+            if (n1 < n2 && n1 < n3)
             {
-                biggestNumber = n1;
+                Console.WriteLine($"The smallest number between {n2} and {n3} is: {n1}");
             }
-            else if (n2 > n1 && n2>n3)
+
+            else if (n2 < n1 && n2 < n3)
             {
-                biggestNumber = n2;
+                Console.WriteLine($"The smallest number between {n1} and {n3} is: {n2}");
             }
-            else if(n3 > n1 && n3 > n2)
-            {  
-                biggestNumber = n3;
-            }
-            else if(n1 < n2 && n1 < n3)
-            {
-                smallestNumber = n1;
-            }
-            else if(n2 < n1 && n2 < n3)
-            {
-                smallestNumber= n2;
-            }
+
             else if (n3 < n1 && n3 < n2)
             {
-                smallestNumber = n3;
+                Console.WriteLine($"The smallest number between {n1} and {n2} is: {n3}");
+            }
+
+        }
+        /// <summary>
+        /// Receives 3 numbers and write them in increasing order.
+        /// </summary>
+        /// <param name="n1"></param>
+        /// <param name="n2"></param>
+        /// <param name="n3"></param>
+        public void IncresingOrder(double n1, double n2, double n3)
+        {
+
+
+            if (n1 != n2 || n2 != n3 || n1 != n3)
+            {
+                double biggestNumber = 0;
+                double middleNumber = 0;
+                double smallestNumber = 0;
+
+                if (n1 > n2 && n1 > n3 && n2 > n3)
+                {
+                    biggestNumber = n1;
+                    middleNumber = n2;
+                    smallestNumber = n3;
+                }
+                else if (n2 > n1 && n2 > n3 && n1 > n3)
+                {
+                    biggestNumber = n2;
+                    middleNumber = n1;
+                    smallestNumber = n3;
+                }
+                else if (n3 > n1 && n3 > n2 && n2 > n1)
+                {
+                    biggestNumber = n3;
+                    middleNumber = n2;
+                    smallestNumber = n1;
+                }
+                else if (n3 < n2 && n3 > n1)
+                {
+                    biggestNumber = n2;
+                    middleNumber = n3;
+                    smallestNumber = n1;
+                }
+                else if (n2 < n1 && n2 < n3 && n3 > n1)
+                {
+                    biggestNumber = n3;
+                    middleNumber = n1;
+                    smallestNumber = n2;
+                }
+
+                Console.WriteLine($"Numbers in order: {smallestNumber}, {middleNumber} and {biggestNumber}");
+            }
+            else if (n1 == n2 && n1 != n3 && n2 == n3 && n1 == n3)
+            {
+                Console.WriteLine("Can you please not ruin my method? Thank you! ");
+                return;
             }
 
 
 
 
-            Console.WriteLine($"Numbers in order: {smallerNumber}, {middleNumber} and {biggerNumber}");
-            
+
+
+
+
+        }
+
+        public void IncreasingOrder2(params double[] numbers)
+        {
+
+            foreach (var item in numbers)
+            {
+                Console.WriteLine(item);
+            }
+
         }
     }
-    }
+}
 
 

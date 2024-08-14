@@ -15,15 +15,31 @@ namespace Methods.Console
 
 
 
-
             //utilizing.CalculateAllowance("Junior", 'M', 'S', 15, 2400);
 
-            utilizing.SmallestNumber(9999, 800, 80);
+            //utilizing.SmallestNumber(9999, 800, 80);
 
-            var fruits = new List<int> { 5, 7, 63, 846 };
+            var numbers = new List<int> { 5, 7, 63, 846 };
+            var doubledNumbers = new List<int>();
+
+            int DoubleNumber(int num) 
+            {
+                return num * 2;
+            }
 
 
-            
+
+            foreach (int x in numbers)
+            {
+                System.Console.WriteLine(x);
+                int y = DoubleNumber(x);
+                doubledNumbers.Add(y);
+                
+            }
+
+            utilizing.IncreasingOrder2(5,5,63,521,36);
+
+
 
 
         }
