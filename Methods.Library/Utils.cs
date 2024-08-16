@@ -405,7 +405,7 @@ namespace Methods.Library
             {
                 System.Console.Write(i+ " ");
             }
-            
+            System.Console.WriteLine("I can't think of any other solution. HELP!!!!!");
         }
 
     }
