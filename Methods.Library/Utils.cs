@@ -397,6 +397,8 @@ namespace Methods.Library
             }
             System.Console.WriteLine($"\nThere are {numberOfVowels} vowels in \"{word}\".\n");
         }
+
+        
     }
 }
 
