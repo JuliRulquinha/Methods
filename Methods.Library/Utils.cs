@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.Immutable;
 using System.Diagnostics.Metrics;
 using System.Linq;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
 using System.Runtime.Intrinsics.X86;
 using System.Text;
 using System.Threading.Tasks;
@@ -95,7 +98,7 @@ namespace Methods.Library
 
         // Method - 9
 
-        public void Names(string firstName, string secondName)
+        public void ShowFirstAndSecondName(string firstName, string secondName)
         {
             Console.WriteLine(secondName + "," + firstName);
         }
@@ -151,9 +154,9 @@ namespace Methods.Library
         {
             double cost = numberOfBeer * 1.80;
             double beerPrice = 2.10;
-            double totalPrice = numberOfBeer * beerPrice;
-            double profit = totalPrice - cost;
             double grossRevenue = numberOfBeer * beerPrice;
+            double profit = grossRevenue - cost;
+
 
             Console.WriteLine($"The cost is {cost}\n The gross revenue is {grossRevenue} \n The profit is {profit}");
             return cost;
@@ -316,31 +319,86 @@ namespace Methods.Library
 
                 Console.WriteLine($"Numbers in order: {smallestNumber}, {middleNumber} and {biggestNumber}");
             }
-            else if (n1 == n2 && n1 != n3 && n2 == n3 && n1 == n3)
-            {
-                Console.WriteLine("Can you please not ruin my method? Thank you! ");
-                return;
-            }
-
-
-
-
-
-
-
 
         }
 
-        public void IncreasingOrder2(params double[] numbers)
+        // public void IncreasingOrder2(params double[] numbers)
+        // {
+
+        //     foreach (var x in numbers)
+        //     {
+        //         Console.WriteLine(x);
+        //     }
+
+        // }
+
+        public void PrintNumbersInOrderAndReverse(int number)
+        {
+            int otherNumber = number;
+            for (int i = 1; i <= number ; i++)
+            {
+                System.Console.Write(i+" ");
+                
+            }
+            System.Console.WriteLine("\n");
+            for (int i = otherNumber; i <= number ; i--)
+            {
+                if(i == 0)
+                {
+                    break;
+                }
+                System.Console.Write(i+" ");
+
+            }
+        }
+
+        public void PrintCharsInEvenPosition(string word)
         {
 
-            foreach (var x in numbers)
+            for (int i = 0; i < word.Length; i++)
             {
-                Console.WriteLine(x);
+                if(i% 2 == 0)
+                System.Console.WriteLine(word[i]);
             }
+        
+        }
 
+        public void SwapCharsInString(string s)
+        {
+            for(int i = s.Length-1; i>=0; i--)
+            {
+                System.Console.Write(s[i]);
+            }
+           
+        }
+        public bool IsAVowel(char vowel)
+        {
+            vowel = char.ToUpper(vowel);
+            return vowel =='A' || vowel=='E' || vowel=='I' || 
+                       vowel=='O' || vowel=='U'; 
+        } 
+
+        public void CountVowel(string word)
+        {
+            int numberOfVowels =0;
+            word.ToUpper();
+
+            System.Console.WriteLine($"\nHow many vowels are there in \"{word}?\"\n");
+
+            for (int i = 0; i < word.Length; i++)
+            {
+
+                if(IsAVowel(word[i]))
+                {
+                    numberOfVowels++;
+                System.Console.WriteLine($"{word[i]} is in the {i} position.");
+
+                }
+            }
+            System.Console.WriteLine($"\nThere are {numberOfVowels} vowels in \"{word}\".\n");
         }
     }
 }
+
 
 

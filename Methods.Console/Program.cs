@@ -22,26 +22,30 @@ namespace Methods.Console
             var numbers = new List<int> { 5, 7, 63, 846 };
             var doubledNumbers = new List<int>();
 
-            int DoubleNumber(int num) 
-            {
-                return num * 2;
-            }
+            // int DoubleNumber(int num) 
+            // {
+            //     return num * 2;
+            // }
 
 
 
-            foreach (int x in numbers)
-            {
-                System.Console.WriteLine(x);
-                int y = DoubleNumber(x);
-                doubledNumbers.Add(y);
+            // foreach (int x in numbers)
+            // {
+            //     System.Console.WriteLine(x);
+            //     int y = DoubleNumber(x);
+            //     doubledNumbers.Add(y);
                 
-            }
+            // }
 
-            utilizing.IncreasingOrder2(5,5,63,521,36);
+            // utilizing.IncreasingOrder2(5,5,63,521,36);
+
+            // utilizing.PrintNumbersInOrderAndReverse(5);
 
 
-
-
+        //       utilizing.PrintCharsInEvenPosition("avocado");
+                
+                utilizing.SwapCharsInString("butterfly");
+                // utilizing.CountVowel("JAMAICANO");
         }
     }
 }
