@@ -398,7 +398,16 @@ namespace Methods.Library
             System.Console.WriteLine($"\nThere are {numberOfVowels} vowels in \"{word}\".\n");
         }
 
-        
+        public void From0ToNumberThenSum(int number)
+        {
+            int i = 0;
+            for (; i <= number; i++)
+            {
+                System.Console.Write(i+ " ");
+            }
+            
+        }
+
     }
 }
 

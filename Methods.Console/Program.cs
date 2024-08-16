@@ -44,8 +44,9 @@ namespace Methods.Console
 
         //       utilizing.PrintCharsInEvenPosition("avocado");
                 
-                utilizing.SwapCharsInString("butterfly");
+                // utilizing.SwapCharsInString("butterfly");
                 // utilizing.CountVowel("JAMAICANO");
+                utilizing.From0ToNumberThenSum(8);
         }
     }
 }
